@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+
+<body>
+  <h2 class="p-2 m-2 bg-secondary rounded-1 text-white">Formulário de Cadastro</h2>
+  <form class="row g-3 p-2 m-2 bg-body-secondary rounded-1 pb-3" action="backend.php" method="post">
+
+    <fieldset class="fsPessoais row g-3">
+      <legend class="fsPessoais">Dados Pessoais</legend>
+      <div class="col-md-6">
+        <label for="nome" class="form-label">Nome: </label>
+        <input type="text" class="form-control" name="nome" />
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">E-mail: </label>
+        <input type="email" name="email" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label for="cidade" class="form-label">Cidade: </label>
+        <input type="text" name="cidade" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label for="estado" class="form-label">Estado:</label>
+        <select name="estado" class="form-select">
+          <option value="" selected>Escolha...</option>
+          <option value="PA">Pará</option>
+          <option value="AM">Amazonas</option>
+        </select>
+      </div>
+      
+    </fieldset> <!-- fim dos dados pessoais -->
+
+    <fieldset class="fsProf g-3">
+      <legend class="fsProf">Dados profissionais</legend>
+      <div class="col-md-6">
+        <label for="cargo" class="form-label">Cargo pretendido:</label><br />
+        <input type="radio" name="cargo" value="1" class="form-check-input" /> Analista de sistemas
+        <input type="radio" name="cargo" value="2" class="form-check-input" /> Analista de banco de dados
+        <input type="radio" name="cargo" value="3" class="form-check-input"/> Analista de suporte
+      </div><br>
+
+      <div class="col-12">
+        <label for="tecnologia" class="form-label">Tecnologias de interesse:</label><br />
+        <input type="checkbox" name="tecnologia" value="1" class="form-check-input"> Java
+        <input type="checkbox" name="tecnologia" value="2" class="form-check-input"> HTML, CSS
+        <input type="checkbox" name="tecnologia" value="3" class="form-check-input"> JavaScript
+        <input type="checkbox" name="tecnologia" value="4" class="form-check-input"> SQL
+      </div><br />
+
+      <label for="minicurriculo">Mini currículo:</label><br />
+      <div class="form-floating">
+        <textarea name="minicurriculo" cols="50%" rows="5" class="form-control"></textarea>
+      </div>
+      
+    </fieldset> <!-- fim dos dados profissionais -->
+
+    <fieldset class="fsAcoes">
+      <legend class="fsAcoes">Ações</legend>
+      <div class="centro">
+        <input class="btn btn-primary" type="submit" value="Enviar" />
+        <input class="btn btn-primary" type="reset" value="Limpar">
+      </div>
+    </fieldset> <!-- fim das ações -->
+
+  </form> <!-- fim do form -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+
+</html>
